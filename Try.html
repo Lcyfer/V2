@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+
+    <title>Portfolio</title>
+
+</head>
+<body>
+  <nav>
+       <div class="container">
+      <span class="new"></span>
+       <span class='new'></span>
+       <span class="new"></span>
+      </div>
+    <span ><img src="lm.png"></span>
+    <ul>
+      <li><a class="active"href="#" >Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Skills</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+   
+  </nav>
+  <h1>hello</h1>
+<script>
+    if (window.innerWidth <= 768) {
+        // Code to execute on mobile devices or smaller screens
+        console.log("You are on a mobile device or a smaller screen.");
+
+    let dropdwn = document.querySelector(".container");
+    dropdwn.addEventListener("click", down);
+    
+    function down() {
+        let ul = document.querySelector("ul");
+        if (ul.style.display !== "block") {
+            ul.style.display = "block"; // Use '=' for assignment
+        } else {
+            ul.style.display = "none";
+        }
+    }
+    } else {
+        // Code to execute on larger screens
+        console.log("large");
+        document.querySelector("*").style.backgroundColor="red";
+        let ul=document.querySelector("ul");
+        ul.style.display="flex";
+    }
+    
+for (let i = 0; i <5; i++) {
+    console.log(i);
+}
+</script>
+  
+</body>
+</html>
+  
