@@ -17,27 +17,34 @@ nav span img{
   width: 100px;
 }
 nav ul{
-  background-color: #005678;
+  background-color:#01012b;
   display: flex;
   flex-wrap: wrap;
   float: right;
   margin-right: 20px;
-  transition: 1s ease-in-out;
+
 }
 nav ul li{
+  text-align: center;
+  background-color: #01012b;
   list-style-type: none;
-  line-height: 80px;
+  line-height: 75px;
   margin: 0.5px;
+  width:100px;
+  border-radius: 10px;
+
 }
 nav ul li a{
-color: #05d9e8;
-text-decoration: none;
-margin: 5px;
-padding:5px ;
+  font-family:"Orbitron", sans-serif;
+  color: #05d9e8;
+  text-decoration: none;
+  margin: 5px;
+  padding:10px ;
 }
-a.active,a:hover{
+nav ul li.active,nav ul li:hover{
   border: solid 2px #ff2a6d;
   transition: .5s;
+  border-radius: 10px;
 }
 /*icon*/
  .container{
@@ -59,10 +66,22 @@ a.active,a:hover{
   }
 @media (max-width:768px) {
   nav ul{
+  background-color:#01012b ;
   display:none;
   transition: 1s ease-in-out;
+  margin-right: 0;
+  position: absolute;
+  width: 100%;
+  top: 60px;
+ 
+}
+nav ul li{
+  text-align: center;
+  padding: 0;
+  flex:1 0 18rem;
 }
 .container{
   display: block;
 }
+
 }
