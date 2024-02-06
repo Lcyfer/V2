@@ -64,7 +64,7 @@ nav ul li.active,nav ul li:hover{
     width: 30px;
     height: 1px;
   }
-@media (max-width:768px) {
+@media only screen and (max-width:768px) {
   nav ul{
   background-color:#01012b ;
   display:none;
@@ -73,6 +73,7 @@ nav ul li.active,nav ul li:hover{
   position: absolute;
   width: 100%;
   top: 60px;
+  transition: 5s;
  
 }
 nav ul li{
