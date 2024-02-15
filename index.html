@@ -6,21 +6,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik+Doodle+Triangles&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
     
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style(0).css">
 
 
     <title>Portfolio</title>
 
 </head>
 <body>
-  <nav>
-       <div class="container">
-      <span class="new"></span>
-       <span class='new'></span>
-       <span class="new"></span>
-      </div>
-    <span ><img src="lm.png"></span>
+  <header>
+       
+      <span class="logo"><img src="lm.png"></span>
+        <div class="containers">&#9746</div>
+        <div class="container">&#9776</div>
+  <nav class="nav">
+
     <ul>
       <li><a class="active"href="#" >Home</a></li>
       <li><a href="#">About</a></li>
@@ -28,38 +30,71 @@
       <li><a href="#">Contact</a></li>
     </ul>
    
-  </nav>
-  <h1>hello</h1>
-<script>
-    if (window.innerWidth <= 768) {
-        // Code to execute on mobile devices or smaller screens
-        console.log("You are on a mobile device or a smaller screen.");
+</header>
+<section id="sec1">
+  <img id="img1"src="1.png" width="450">
 
-    let dropdwn = document.querySelector(".container");
-    dropdwn.addEventListener("click", down);
-    
-    function down() {
-        let ul = document.querySelector("ul");
-        if (ul.style.display !== "flex") {
-            ul.style.display = "flex";
-            
-            // Use '=' for assignment
-        } else {
-            ul.style.display = "none";
-        }
-    }
-    } else {
-        // Code to execute on larger screens
-        console.log("large");
-       
-        let ul=document.querySelector("ul");
-        ul.style.display="flex";
-    }
-    
-for (let i = 0; i <5; i++) {
-    console.log(i);
+  <div class="porth">
+    <h1 id="welc">Welcome to </h1>
+  </div>
+  <div class="porth">
+    <p id="txt1">I'm delighted to have you visit my portfolio. Here, you'll find a curated collection of my work, showcasing my skills, expertise, and passion for <span style="color:red;">Web Devoloping</span>  Whether you're an employer, a potential collaborator, or simply someone interested in what I do, I invite you to explore and get a glimpse into my professional journey. From design projects to creative endeavors, I aim to demonstrate not just what I've accomplished, but also the dedication and innovation I bring to each endeavor. Thank you for stopping by, and I hope you enjoy browsing through my portfolio as much as I've enjoyed creating it. Let's connect and explore possibilities together! 
+I'm delighted to have you visit my portfolio. Here, you'll find a curated collection of my work, showcasing my skills, expertise, and passion for <span style="color:red;">Web Devoloping</span>  Whether you're an employer, a potential collaborator, or simply someone interested in what I do, I invite you to explore and get a glimpse into my professional journey. From design projects to creative endeavors, I aim to demonstrate not just what I've accomplished, but also the dedication and innovation I bring to each endeavor. Thank you for stopping by, and I hope you enjoy browsing through my portfolio as much as I've enjoyed creating it. Let's connect and explore possibilities together!
+    </p>
+  </div>
+
+  
+</section>
+  
+<script>
+let container = document.querySelector(".container");
+let containers = document.querySelector(".containers");
+
+function open(){
+let nav = document.querySelector(".nav");
+    nav.style.height="350px";
+    document.querySelector("ul").style.opacity=1;
+    container.style.display="none";
+    containers.style.display="block";
 }
-</script>
+
+function close(){
+let nav = document.querySelector(".nav");
+    nav.style.height="0px";
+    document.querySelector("ul").style.opacity=0;
+    container.style.display="block";
+    containers.style.display="none";
+}
+
+if (window.innerWidth <= 768) {
+    container.addEventListener("click",open);
+    containers.addEventListener("click",close);
+    
+    
+}
+else{
+    document.querySelector("*").style.backgroundColor="red";
+    
+}
+
+
+/*scroll*/
+function handleScroll() {
+ let header= document.querySelector("header");
+    if (window.scrollY > 0) {
+        header.style.backgroundColor="grey";
+        // add any additional code you want to execute when the user scrolls past the top of the page
+    } else {
+        header.style.backgroundColor="transparent";
+        // add any additional code you want to execute when the user is at the top of the page
+    }
+}
+
+window.onscroll = function(event) {
+    handleScroll();
+};
+  </script>
+ 
   
 </body>
 </html>
