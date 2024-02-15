@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik+Doodle+Triangles&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rubik+Doodle+Triangles&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 
     
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style(0).css">
 
 
     <title>Portfolio</title>
@@ -24,32 +24,66 @@
   <nav class="nav">
 
     <ul>
-      <li><a class="active"href="#" >Home</a></li>
-      <li><a href="#">About</a></li>
+      <li><a class="active"href="#sec1" >Home</a></li>
+      <li><a href="#sec2">About</a></li>
       <li><a href="#">Skills</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
    
 </header>
 <section id="sec1">
-  <img id="img1"src="1.png" width="450">
-
   <div class="porth">
     <h1 id="welc">Welcome to </h1>
   </div>
   <div class="porth">
-    <p id="txt1">I'm delighted to have you visit my portfolio. Here, you'll find a curated collection of my work, showcasing my skills, expertise, and passion for <span style="color:red;">Web Devoloping</span>  Whether you're an employer, a potential collaborator, or simply someone interested in what I do, I invite you to explore and get a glimpse into my professional journey. From design projects to creative endeavors, I aim to demonstrate not just what I've accomplished, but also the dedication and innovation I bring to each endeavor. Thank you for stopping by, and I hope you enjoy browsing through my portfolio as much as I've enjoyed creating it. Let's connect and explore possibilities together! 
-I'm delighted to have you visit my portfolio. Here, you'll find a curated collection of my work, showcasing my skills, expertise, and passion for <span style="color:red;">Web Devoloping</span>  Whether you're an employer, a potential collaborator, or simply someone interested in what I do, I invite you to explore and get a glimpse into my professional journey. From design projects to creative endeavors, I aim to demonstrate not just what I've accomplished, but also the dedication and innovation I bring to each endeavor. Thank you for stopping by, and I hope you enjoy browsing through my portfolio as much as I've enjoyed creating it. Let's connect and explore possibilities together!
+    <p id="txt1">I'm delighted to have you visit my portfolio. Here, you'll find a curated collection of my work, showcasing my skills, expertise, and passion for <span style="color:red;">Web Devoloping</span>  Whether you're an Student, a professional Programmer, or simply someone interested in what I do, I invite you to explore and get a glimpse into my professional journey. From design projects to creative endeavors, I aim to demonstrate not just what I've accomplished, but also the dedication and innovation I bring to each endeavor. Thank you for stopping by, and I hope you enjoy browsing through my portfolio as much as I've enjoyed creating it. Let's connect and explore possibilities together! 
     </p>
   </div>
-
+  <img id="img1"src="2.png">
   
+</section>
+<section id="sec2">
+  
+    <h1 id="s2">About</h1>
+    <img id="img2"src="3.jpg">
+    <h2>
+        Hello there! I'm 
+    </h2>
+    <p>
+        A dedicated student on a mission to carve a path in the captivating world of web development.
+        With a passion for problem-solving and a love for creative expression,
+        I am committed to mastering the art and science of building captivating digital experiences.
+        
+
+          Throughout my educational journey,
+          I have eagerly delved into the intricacies of web development,
+          from mastering front-end technologies like HTML, CSS, and JavaScript,
+          to diving into back-end frameworks such as Node.js and Django.
+          Each line of code I write is a step closer to realizing my vision of crafting seamless, user-centric web solutions.
+
+            This portfolio is a reflection of my journey, showcasing a curated collection of projects that demonstrate my skills, creativity, 
+            and dedication to the craft. From responsive websites to dynamic web applications, each project represents a milestone in my evolution as a web developer.
+
+              Join me as I embark on this exhilarating adventure, where innovation meets functionality, and together, 
+              let's push the boundaries of what's possible in the realm of web development!
+    </p>
+    <div >
+      <span class="btn"><a href="">
+      View Resume
+      </a>
+      </span>
+      <span class="btn"><a href="#">
+        Contact Me!
+      </a>
+      </span>
+    </div>
 </section>
   
 <script>
 let container = document.querySelector(".container");
 let containers = document.querySelector(".containers");
 
+container.addEventListener("click",open);
 function open(){
 let nav = document.querySelector(".nav");
     nav.style.height="350px";
@@ -57,7 +91,8 @@ let nav = document.querySelector(".nav");
     container.style.display="none";
     containers.style.display="block";
 }
-
+containers.addEventListener("click",close);
+ 
 function close(){
 let nav = document.querySelector(".nav");
     nav.style.height="0px";
@@ -66,16 +101,9 @@ let nav = document.querySelector(".nav");
     containers.style.display="none";
 }
 
-if (window.innerWidth <= 768) {
-    container.addEventListener("click",open);
-    containers.addEventListener("click",close);
-    
-    
-}
-else{
-    document.querySelector("*").style.backgroundColor="red";
-    
-}
+
+
+
 
 
 /*scroll*/
